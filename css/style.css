@@ -497,3 +497,35 @@ body {
   margin-top: 1rem;
   font-size: 0.9rem;
 }
+
+/* Targets any <button> inside #cart-items */
+#cart-items button {
+  background-color: #4CAF50;    /* green background */
+  color: white;                 /* white text */
+  padding: 0.5rem 1rem;         /* spacing */
+  border: none;                 
+  border-radius: 0.3rem;        /* rounded corners */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+/* Hover state */
+#cart-items button:hover {
+  background-color: #45a049;    /* darker green */
+}
+
+#wishlist-items button {
+  background-color: #4CAF50;    /* green background */
+  color: white;                 /* white text */
+  padding: 0.5rem 1rem;         /* spacing */
+  border: none;                 
+  border-radius: 0.3rem;        /* rounded corners */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+#wishlist-items button {
+  background-color: #45a049; 
+}
