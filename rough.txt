@@ -1,0 +1,77 @@
+CSS = 54-59 line for background image in front page dashboard 
+.hero {
+  background-image: url('grassbackground.png'); /* Replace with your actual image path */
+  background-size: cover;     /* Scales the image to cover the container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image from repeating */
+  padding: 100px 20px;        /* Adds space inside the section */
+  color: white;               /* Ensures text is visible over the image */
+  text-align: center;
+}
+
+main.js add to cart 13-23 line 
+function addToCart(productId) {
+  const cart = getStorage('cart');
+  if (!cart.includes(productId)) {
+    cart.push(productId);
+    setStorage('cart', cart);
+    alert('Item added to cart!');
+    updateCartCount();
+  } else {
+    alert('Item already in cart');
+  }
+}
+
+main.js 3-10 line 
+// Utility functions
+function getStorage(name) {
+  return JSON.parse(localStorage.getItem(name)) || [];
+}
+
+function setStorage(name, data) {
+  localStorage.setItem(name, JSON.stringify(data));
+}
+
+
+line 130-147 index html
+<!-- review -->
+    <section class="review-section">
+  <h2>What Our Customers Say 💬</h2>
+  <div class="slider">
+    <div class="slide active">
+      <p>"Great quality seeds and fast delivery!"</p>
+      <h4>- Ramesh Patel</h4>
+    </div>
+    <div class="slide">
+      <p>"The fertilizers improved my crop yield significantly."</p>
+      <h4>- Sunita Deshmukh</h4>
+    </div>
+    <div class="slide">
+      <p>"User-friendly site and excellent support."</p>
+      <h4>- Akshay Verma</h4>
+    </div>
+  </div>
+</section>
+
+line 37-50 main js 
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) slide.classList.add('active');
+  });
+}
+
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}, 3000);
+
+
+
+.logo {
+  font-size: 2.0rem;
+  font-weight: bold;
+}

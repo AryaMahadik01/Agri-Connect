@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriConnect - Home</title>
+    <link rel="icon" href="images/logo2.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="navbar">
+      <img src="images/logo2.png" alt="Logo" class="logo-icon">
+      <div class="logo">Agri-Connect</div>
+      <input
+        type="text"
+        placeholder="Search for crops, tools..."
+        class="search-bar"
+      />
+      <nav class="nav-links">
+        <a href="login.html">🔐Login</a>
+        <a href="register.html">📝Register</a>
+        <a href="wishlist.html">💖Wishlist</a>
+        <a href="cart.html">🛒Cart</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1 class="para">Welcome to Agri-Connect</h1>
+      <h2 class="para">"Your one-stop marketplace for all agriculture needs"</h2>
+      <h2 class="para"><i>Agriculture remains the backbone of many economies, particularly in countries 
+like India where a significant portion of the population depends on farming for 
+livelihood. However, the agricultural sector often faces challenges such as lack 
+of access to modern tools, insufficient information about fertilizers and 
+pesticides, and limited awareness of government schemes.</i></h2>
+      <br />
+      <a href="products.html" class="btn">Shop Now</a>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+      <h2>Shop by Category</h2>
+      <div class="category-grid">
+        <a href="seeds.html" class="module-cate">Seeds 🌱</a>
+        <a href="crops.html" class="module-cate">Crops 🌾</a>
+        <a href="fertilizers.html" class="module-cate">Fertilizers 🧪</a>
+        <a href="pesticides.html" class="module-cate">Pesticides 🐛</a>
+        <a href="tools.html" class="module-cate">Tools 🛠️</a>
+      </div>
+    </section>
+
+    <section class="featured-products">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/icon-barley.png" alt="Wheat Seeds" />
+          <h3>Wheat Seeds</h3>
+          <p>Flash sales alerts typically offer time-limited discounts on select products. 
+            They entice customers to purchase before the sale ends.</p>
+          <p>₹120</p>
+          <button onclick="addToCart('wheat')" class="btn">
+            &#128722; Add to Cart
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="images/icon-barley.png" alt="Rice Seeds" />
+          <h3>Rice Seeds</h3>
+          <p>Flash sales alerts typically offer time-limited discounts on select products. 
+            They entice customers to purchase before the sale ends.</p>
+          <p>₹100</p>
+          <button onclick="addToCart('rice')" class="btn">
+            &#128722; Add to Cart
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="images/icon-barley.png" alt="Fertilizer" />
+          <h3>Organic Fertilizer</h3>
+          <p>Flash sales alerts typically offer time-limited discounts on select products. 
+            They entice customers to purchase before the sale ends.</p>
+          <p>₹300</p>
+          <button onclick="addToCart('organic-fertilizer')" class="btn">
+            &#128722; Add to Cart
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="images/icon-barley.png" alt="Fertilizer" />
+          <h3>Organic Fertilizer</h3>
+          <p>Flash sales alerts typically offer time-limited discounts on select products. 
+            They entice customers to purchase before the sale ends.</p>
+          <p>₹300</p>
+          <button onclick="addToCart('organic-fertilizer')" class="btn">
+            &#128722; Add to Cart
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="images/icon-barley.png" alt="Pesticide A+" />
+          <h3>Pesticide A+</h3>
+          <p>Flash sales alerts typically offer time-limited discounts on select products. 
+            They entice customers to purchase before the sale ends.</p>
+          <p>₹250</p>
+          <button onclick="addToCart('pesticide-a')" class="btn">
+            &#128722; Add to Cart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Access Modules -->
+    <section class="quick-access">
+      <h2>Explore More</h2>
+      <div class="module-links">
+        <a href="news.html" class="module-cate">📰 Agriculture News</a>
+        <a href="news.html" class="module-cate">📰 Agriculture News</a>
+        <a href="news.html" class="module-cate">📰 Agriculture News</a>
+        <a href="gov-schemes.html" class="module-cate">🏛️ Govt Schemes</a>
+        <a href="crops-details.html" class="module-cate">🌾 70+ Crop Details</a>
+      </div>
+    </section>
+
+    <!-- 👨‍🌾 About Us -->
+    <section class="quick-access">
+      <h2>About Agri-Connect</h2>
+      <p>
+        AgriConnect is a farmer-friendly platform helping bridge the gap between
+        agriculture suppliers and buyers. With real-time news, government scheme
+        awareness, and in-depth crop data, we aim to empower Indian agriculture.
+      </p>
+    </section>
+    <!-- review -->
+    <section class="review-section">
+  <h2>What Our Customers Say 💬</h2>
+  <div class="slider-container">
+    <button class="prev-btn">⬅️</button>
+
+    <div class="slider">
+      <div class="slide active">
+        <img src="images/profile thor.jpeg" alt="Ramesh">
+        <p>"Great quality seeds and fast delivery!"</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <h4>- Thor Odinson</h4>
+      </div>
+
+      <div class="slide">
+        <img src="images/profile wanda.jpeg" alt="Sunita">
+        <p>"The fertilizers improved my crop yield significantly."</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <h4>- Wanda Maximoff</h4>
+      </div>
+      <div class="slide">
+        <img src="images/profile cap.jpeg" alt="Sunita">
+        <p>"One place to shop all agri needs. Great!"
+          One place to shop all agri needs. Great!
+        </p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <h4>- Steven Grant Rogers</h4>
+      </div>
+
+      <div class="slide">
+        <img src="images/profile ironman.jpeg" alt="Akshay">
+        <p>"User-friendly site and excellent support."</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <h4>- Tony Stark</h4>
+      </div>
+    </div>
+
+    <button class="next-btn">➡️</button>
+  </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div>
+          <h3>AgriConnect</h3>
+          <p>Empowering Farmers & Agri-Business</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="products.html">Shop</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Policies</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Return Policy</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 2025 AgriConnect. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

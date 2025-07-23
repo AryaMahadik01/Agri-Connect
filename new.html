@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .crop-card { padding: 10px; border: 1px solid #ccc; width: 150px; margin: 10px; text-align: center; }
+    .crop-card img { width: 60px; height: 60px; }
+    .crop-slider { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+  </style>
+</head>
+<body>
+
+<h2>🌾 Find Crops by State</h2>
+<select id="stateSelect" onchange="showCrops()">
+  <option value="">--Select a State--</option>
+  <option value="maharashtra">Maharashtra</option>
+  <option value="punjab">Punjab</option>
+</select>
+
+<div id="cropSlider" class="crop-slider"></div>
+
+<script>
+const cropDataWithImages = {
+  maharashtra: [
+    { name: "Cotton", img: "https://via.placeholder.com/60" },
+    { name: "Soybean", img: "https://via.placeholder.com/60" }
+  ],
+  punjab: [
+    { name: "Wheat", img: "https://via.placeholder.com/60" },
+    { name: "Rice", img: "https://via.placeholder.com/60" }
+  ]
+};
+
+function showCrops() {
+  const state = document.getElementById("stateSelect").value;
+  const crops = cropDataWithImages[state] || [];
+  const cropSlider = document.getElementById("cropSlider");
+
+  cropSlider.innerHTML = "";
+
+  if (crops.length === 0) {
+    cropSlider.innerHTML = "<p>No crop data available for this state.</p>";
+    return;
+  }
+
+  crops.forEach(crop => {
+    const div = document.createElement("div");
+    div.className = "crop-card";
+    div.innerHTML = `
+      <img src="${crop.img}" alt="${crop.name}">
+      <h4>${crop.name}</h4>
+    `;
+    cropSlider.appendChild(div);
+  });
+}
+</script>
+
+</body>
+</html>
