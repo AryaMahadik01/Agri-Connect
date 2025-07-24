@@ -75,3 +75,33 @@ setInterval(() => {
   font-size: 2.0rem;
   font-weight: bold;
 }
+
+
+
+✅ Next Steps: What do you want to do?
+Please select one or more:
+
+✅ Fix register/login to connect with MongoDB
+
+✅ Ensure product browsing/cart/wishlist work
+
+✅ Add admin dashboard or product management
+
+✅ Deploy the website (e.g., on Render/Heroku/GitHub Pages)
+
+✅ Add new features or design improvements
+
+✅ Generate PDF or documentation for the project
+
+
+🔧 Step 2: Modify the HTML Injection Code (if not done yet)
+Make sure this block inside loadCart() contains the <img> tag:
+
+main.js
+
+div.innerHTML = `
+  <img src="${item.image}" alt="${item.name}" style="width: 100px; height: 100px; margin-bottom: 10px;">
+  <h4>${item.name}</h4>
+  <p>Price: ₹${item.price}</p>
+  <button onclick="removeFromCart('${id}')">Remove</button>
+`;

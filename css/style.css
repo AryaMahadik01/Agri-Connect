@@ -11,6 +11,7 @@
   --red:#ea0b0b;
   --black:#000000;
   --lightblue:#88d9f4;
+  --green-dark:#073115;
 }
 
 body {
@@ -52,8 +53,13 @@ body {
 }
 
 /* Hover Animation */
+.logo-icon:hover {
+  color:var(--green-dark);
+  transform: scale(1.05);
+  text-shadow: 1px 1px 5px rgba(46, 110, 125, 0.4);
+}
 .logo:hover {
-  color:var(--lightblue);
+  color:var(--green-dark);
   transform: scale(1.05);
   text-shadow: 1px 1px 5px rgba(46, 110, 125, 0.4);
 }
@@ -500,32 +506,30 @@ body {
 
 /* Targets any <button> inside #cart-items */
 #cart-items button {
-  background-color: #4CAF50;    /* green background */
-  color: white;                 /* white text */
-  padding: 0.5rem 1rem;         /* spacing */
-  border: none;                 
-  border-radius: 0.3rem;        /* rounded corners */
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.25s ease;
+  background-color: var(--dark-green);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* Hover state */
 #cart-items button:hover {
-  background-color: #45a049;    /* darker green */
+ background-color: var(--black);   /* darker green */
 }
 
 #wishlist-items button {
-  background-color: #4CAF50;    /* green background */
-  color: white;                 /* white text */
-  padding: 0.5rem 1rem;         /* spacing */
-  border: none;                 
-  border-radius: 0.3rem;        /* rounded corners */
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.25s ease;
+  background-color: var(--dark-green);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-#wishlist-items button {
-  background-color: #45a049; 
+#wishlist-items button:hover{
+  background-color: var(--black); 
 }
